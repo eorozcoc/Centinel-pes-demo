@@ -1,0 +1,37 @@
+# Centinel PWA iPhone v0.3 — DEMOSTRACIÓN LOCAL
+
+Esta carpeta contiene una PWA **estática** lista para GitHub Pages. No necesita Python, Mac, membresía Apple Developer ni clave API. El código se publica como un sitio web **público**. No contiene PIN ni acceso a SQL.
+
+## Lo que sí puedes probar
+- Interfaz futurista con dashboard, conversación, Advisor, solicitudes SQL de prueba y bitácora.
+- Respuestas de conversación preprogramadas, claramente identificadas como DEMO.
+- Voz de salida (según compatibilidad del navegador) y dictado mediante teclado iOS.
+- Simulación de aprobación / rechazo de SQL, sin ejecutar consultas.
+- Historial guardado en localStorage en tu propio dispositivo.
+- Instalación en la pantalla de inicio como web app.
+
+## Lo que NO hace esta versión
+- No razona con un modelo real de IA ni se conecta a ChatGPT/OpenAI.
+- No observa servidores, no lee correos, no ejecuta SQL ni realiza acciones externas.
+- No tiene autenticación real ni backend persistente.
+- Los datos locales no están cifrados por la aplicación; **no ingreses secretos ni datos confidenciales**.
+- No mantiene escucha permanente ni funciona como asistente de fondo en iOS.
+
+## Publicar con solo iPhone — GitHub Pages
+1. Abre Safari y entra a https://github.com/. Crea una cuenta gratuita si hace falta.
+2. Pulsa `+` > `New repository`. Nombre sugerido: `centinel-pwa-demo`; visibilidad **Public**. Puedes marcar `Add README` para crear la rama main.
+3. En el repositorio entra en `Add file` > `Upload files` y selecciona en Archivos del iPhone los archivos extraídos de esta carpeta (`index.html`, `style.css`, `app.js`, `manifest.webmanifest`, `sw.js`, `icon-192.png`, `icon-512.png`; `.nojekyll` es opcional). No subas el ZIP sin extraer: GitHub Pages no lo abrirá.
+4. Pulsa `Commit changes`.
+5. En `Settings` > `Pages`, en `Build and deployment` elige `Deploy from a branch`, rama `main`, carpeta `/(root)` y pulsa `Save`.
+6. Usa `Visit site` desde Settings > Pages. Normalmente la dirección será `https://TU-USUARIO.github.io/centinel-pwa-demo/`.
+7. En Safari, usa el menú de página/Compartir > `Agregar a pantalla de inicio`, activa `Abrir como app web`, y pulsa Agregar.
+
+### Pruebas sugeridas
+- En Conversación escribe: `Centinel, analiza los índices SQL Server`.
+- Activa VOZ y toca el botón para escuchar la respuesta.
+- Abre Advisor y simula recomendaciones.
+- En Aprobaciones crea una solicitud de prueba y registra AUTORIZO DEMO.
+- Cierra y reabre el icono de Centinel; debería persistir el historial en el mismo dispositivo.
+
+### Próximo paso para IA real
+Hará falta un backend HTTPS privado/autenticado para proteger las claves de API, manejar memoria del servidor y aplicar permisos. Nunca pongas una clave API en archivos publicados en GitHub Pages.
